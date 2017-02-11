@@ -5,16 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-@NgModule({
-  declarations: [
+@NgModule({//NgModuleデコレータを使い構成要素を登録する
+  declarations: [//declarationsプロパティにcompoennt, directive, pipeを登録する
     AppComponent
   ],
-  imports: [
-    BrowserModule,
+  imports: [//他の@NgModuleで定義されたmodule
+    BrowserModule,//ngIfクラス、DecimalPipeなど基本機能が含まれる
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [],//DI元のクラス
+  bootstrap: [AppComponent]//最初に起動するコンポーネント
 })
-export class AppModule { }
+export class AppModule { }//@NgModuleの設定情報をAppModuleクラスとして公開する
