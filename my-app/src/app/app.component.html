@@ -1,5 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Angular Sample</h1>
+<p>1wayDataBind</p>
+<p>{{title}}</p>
+<hr>
+<p>2wayDataBind</p>
 <input [(ngModel)]="value">
 {{value}}
+<hr>
+<p>*ngFor</p>
+<div *ngFor="let v of values; let i=index">
+{{i+1}}番目の値は{{v}}
+</div>
+
+<hr>
+<p> *ngIf</p>
+<button *ngIf="valueif" (click)="save($event)">保存</button>
+
+<hr>
+<p>ngSwitch</p>
+<div [ngSwitch]="valueswitch">
+  <div *ngSwitchCase="'case1'">red</div>
+  <div *ngSwitchCase="'case2'">yellow</div>
+  <div *ngSwitchDefault>green</div>
+</div>
+
+<hr>
+<p>pipe</p>
+<div>{{ valuepipe | uppercase }}</div>
+
+<hr>
+<p>class add remove</p>
+<div [class.myClass]="isActive">Hello!!</div>
+
+<hr>
+<p>mulitipul class</p>
+<div [ngClass]="myClasses">Gooby!</div>

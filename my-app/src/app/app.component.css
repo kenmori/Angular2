@@ -1,3 +1,17 @@
 h1 {
-  color: blue;
+  color: #b58989;
+}
+hr {
+  border-color: #fdeaea;
+}
+
+.myClass {
+  color: #b58989;
+}
+
+.largeText {
+  font-size: 22px;
+}
+.infoColor {
+  color: #f00;
 }
